@@ -18,7 +18,7 @@ The default file structure Groop will look for is:
    ├── Fonts
 ```
 However, it is possible to redefine the root assets folder, existing asset types, and to add new asset types.
-### assets.load()
+## assets.load()
 This loads in all the provided files and creates their respective assets.
 ```lua
  function love.load()
@@ -27,18 +27,18 @@ This loads in all the provided files and creates their respective assets.
  
  end
 ```
-### assets.get(type, name)
+## assets.get(type, name)
 Retrieve an asset for use.
 ```lua
 assets.get(type, name)
 ```
-Example:
+### Example:
 ```lua
 love.graphics.draw(assets.get("images", "player"), 0, 0)
 ```
-### assets.define(type, directory, extensions, process)
+## assets.define(type, directory, extensions, process)
 Redefine the root assets folder, existing asset types, or add new asset types.
 ```lua
 assets.define(type, directory, extensions, process)
 ```
-#### Examples:
+### Examples:
