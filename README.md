@@ -5,4 +5,19 @@ Groop provides a simple way to orginize, manage, and load assets.
 ```lua
 assets = require "groop"
 ```
-## Example
+## Ussage
+The default file structure Groop will look for is:
+```
+Assets/
+  Images/
+  Sounds/
+  Fonts/
+  
+```
+```lua
+ function love.load()
+ 
+  assets.load()
+ 
+ end
+```
