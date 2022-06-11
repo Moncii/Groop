@@ -27,12 +27,18 @@ This loads in all the provided files and creates their respective assets.
  
  end
 ```
-### assets.get()
-Retrive an asset for use.
+### assets.get(type, name)
+Retrieve an asset for use.
 ```lua
 assets.get(type, name)
 ```
 Example:
 ```lua
-love.graphics.draw(assets.get("images", "player"))
+love.graphics.draw(assets.get("images", "player"), 0, 0)
 ```
+### assets.define(type, directory, extensions, process)
+Redefine the root assets folder, existing asset types, or add new asset types.
+```lua
+assets.define(type, directory, extensions, process)
+```
+#### Examples:
