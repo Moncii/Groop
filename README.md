@@ -38,7 +38,16 @@ love.graphics.draw(assets.get("images", "player"), 0, 0)
 ```
 ## assets.define(type, directory, extensions, process)
 Redefine the root assets folder, existing asset types, or add new asset types.
+This must be called before assets.load()
 ```lua
 assets.define(type, directory, extensions, process)
 ```
-### Examples:
+## Examples:
+Define the root assets folder as a folder called "Resources".
+```lua
+assets.define("assets", "Resources")
+```
+Set the "images" asset type to look for files in a folder called "Sprites", and to only accept files with a .png or .jpg extension.
+```lua
+assets.define("images", "Sprites", {".png", ".jpg"})
+```
