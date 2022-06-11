@@ -1,2 +1,2 @@
 # Groop
-Simplified asset management for love2d.
+Groop provides a simple way to orginize, manage, and load assets.
