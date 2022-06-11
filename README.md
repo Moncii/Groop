@@ -8,10 +8,10 @@ assets = require "groop"
 ## Ussage
 The default file structure Groop will look for is:
 ```
-Assets/
-  Images/
-  Sounds/
-  Fonts/
+├── Assets
+   ├── Images
+   ├── Sounds
+   ├── Fonts
   
 ```
 ```lua
