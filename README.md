@@ -77,3 +77,4 @@ assets.define("streamedSounds", "StreamedSounds", {".wav", ".mp3", ".ogg", ".oga
    return asset
 end)
 ```
+All process functions must take in an argument called "file" and return a valid Love2D resource object.
