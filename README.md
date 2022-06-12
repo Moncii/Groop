@@ -53,11 +53,12 @@ assets.define("images", "Sprites", {".png", ".jpg"})
 ```
 ## Processes
 All asset types have a process function that gets called when an asset is created.
-It creates an asset, applies any wanted modification, and the returns it to be stored.
-The default process function for sounds looks like this:
+It creates an asset, applies any wanted modifications, and then returns it to be stored.
+For example, the default process function for sounds looks like this:
 ```lua
 function(file)
    local asset = love.audio.newSource(file, "static")
    return asset
 end
 ```
+Redefining existing process functions, and creating new ones can be done using the ```lua assets.define()``` function.
