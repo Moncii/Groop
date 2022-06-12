@@ -21,11 +21,11 @@ However, it is possible to redefine the root assets folder, existing asset types
 ## assets.load()
 This loads in all the provided files and creates their respective assets.
 ```lua
- function love.load()
- 
-  assets.load()
- 
- end
+function love.load()
+
+   assets.load()
+
+end
 ```
 ## assets.get(type, name)
 Retrieve an asset for use.
@@ -42,7 +42,7 @@ This must be called before assets.load()
 ```lua
 assets.define(type, directory, extensions, process)
 ```
-## Examples:
+### Examples:
 Define the root assets folder as a folder called "Resources".
 ```lua
 assets.define("assets", "Resources")
@@ -50,4 +50,14 @@ assets.define("assets", "Resources")
 Set the "images" asset type to look for files in a folder called "Sprites", and to only accept files with a .png or .jpg extension.
 ```lua
 assets.define("images", "Sprites", {".png", ".jpg"})
+```
+## Processes
+All asset types have a process function that gets called when an asset is created.
+It creates an asset, applies any wanted modification, and the returns it to be stored.
+The default process function for sounds looks like this:
+```lua
+function(file)
+   local asset = love.audio.newSource(file, "static")
+   return asset
+end
 ```
