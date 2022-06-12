@@ -61,4 +61,4 @@ function(file)
    return asset
 end
 ```
-Redefining existing process functions, and creating new ones can be done using the ```lua assets.define()``` function.
+Redefining existing process functions, and creating new ones can be done using the ```luaassets.define()``` function.
