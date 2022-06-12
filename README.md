@@ -63,7 +63,7 @@ end
 ```
 Redefining existing process functions, and creating new ones can be done using the ```assets.define()``` function.
 Lets say you wanted to set the default "sounds" asset type to create streamed audio sources instead of static.
-You could redefine the existing "sounds" asset type to do so, by doing:
+To do this, you could redefine the existing "sounds" asset type by doing:
 ```lua
 assets.define("sounds", "Sounds", {".wav", ".mp3", ".ogg", ".oga", ".ogv"}, function(file)
    local asset = love.audio.newSource(file, "stream")
